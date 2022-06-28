@@ -30,6 +30,7 @@
                         <li><a class="dropdown-item" href="#">Services</a></li>
                         <li><a class="dropdown-item" href="#">Pricing</a></li>
 
+
                       </ul>
                 </div>
                     
@@ -58,6 +59,40 @@
                         </ul>
                       </div>
                     <li class="items-li">Pricing</li>
+                    <li>
+                        <!-- Button to Open the Modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+    Open modal
+  </button>
+  
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Give us some info....</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+            
+          <p><input type="text" name="username" id="name" placeholder="Enter Your Full name"> </p>
+            <p> <input type="text" name="username" id="mail" placeholder="Enter Your Email"></p>
+
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onClick="get()">Submit</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+                    </li>
                 </ul>
 
                
