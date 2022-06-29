@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <title>Responsive Nav</title>
 </head>
-<body>
+<body >
     <div class="container-fluid">
 
         <div class="row">
@@ -18,17 +18,20 @@
 
   
 
-        <div class="nav-bar col-sm col-md col-xs col-lg col-xl col-xxl"   >
+        <div class="nav-bar col-sm-12 col-md col-xs col-lg col-xl col-xxl"   >
 
-            <div class="logo col-lg-6 col-md col-sm col-12 col-xl-7 col-xxl-8 ">
+            <div class="logo col-lg-6 col-md-12 col-sm-12 col-12 col-xl-6 col-xxl-7 ">
                 <h3>Logo</h3>
                 <div class="image dropdown">
                     <li data-bs-toggle="dropdown"><img src="./ham.png" alt="menu" height="30" width="30" ></li>
                     <ul class="dropdown-menu mob-menu w-100 ">
+                        <li><a class="dropdown-item" href="#" id="btn" onClick="p()">Sign Up</a></li>
+
                         <li><a class="dropdown-item" href="#">Home</a></li>
                         <li><a class="dropdown-item" href="#">About</a></li>
                         <li><a class="dropdown-item" href="#">Services</a></li>
                         <li><a class="dropdown-item" href="#">Pricing</a></li>
+
 
                       </ul>
                 </div>
@@ -38,7 +41,7 @@
 
           
 
-            <div class="col-lg-6 col-md col-sm col-xl-5 col-xxl-3">
+            <div class="col-lg-6 col-md- col-sm col-xl-6 col-xxl-5 ">
                 
                 <ul class="items">
                     
@@ -58,7 +61,7 @@
                         </ul>
                       </div>
                     <li class="items-li">Pricing</li>
-                    <button>Sign Up</button>
+                    <span id="btn" onClick="p()">Sign Up</span>
 
                 </ul>
 
@@ -78,9 +81,12 @@
 
     </div>
     <div class="row">
-        <div class="sign col-sm-7 col-md-7 col-7 col-lg-7 col-xl-7 col-xxl-7">
+        <div class="sign col-sm-9 col-md-10 col-11 col-lg-8 col-xl-7 col-xxl-8" id="drop">
             <div class="parent">
                 <div class="child">
+                    <button type="button" class="btn-close w-1" aria-label="Close"
+                    id="close" onClick="cloose()"></button>
+
                     <h1>Welcome</h1>
                     <h3>Let's take your some information</h3>
         
@@ -92,7 +98,7 @@
                     <p><input type="text" placeholder="Email" maxlength="30" id="mail"/></p>
                     <p id="error3"></p>
                     <br>
-                    <p><button onClick="get()">Submit</button></p>
+                    <p><button onClick="get()" class="sub">Submit</button></p>
         
         
                 </div>

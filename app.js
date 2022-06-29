@@ -3,7 +3,6 @@ function get() {
     var fName = document.getElementById("fName").value;
     var lName = document.getElementById("lName").value;
     var mail = document.getElementById("mail").value;
-    var regEx = /^[A-Za-z]+$/;
 
     var error1 =  document.getElementById("error1");
     var error2 =  document.getElementById("error2"); 
@@ -13,6 +12,9 @@ function get() {
     fName = fName.replace(/\s\s+/g, " ");
     lName = lName.replace(/\s\s+/g, " ");
     mail = mail.replace(/\s\s+/g, "");
+
+   
+    
 
    
 
@@ -25,12 +27,7 @@ function get() {
       
     }
 
-    // else if (fName != regEx) {
-    //     error1.innerText="You name does not contain numbers"
-    //     error1.style.transition = "3s";
-    //     error1.style.color = "red";
-
-    // }
+  
 
     else if(lName.length <=1) {
         error2.innerText= "Yourr name must contain more than one character";
@@ -39,13 +36,7 @@ function get() {
 
     }
 
-    // else if (lName != regEx) {
-    //     error2.innerText="Your name does not contain numbers"
-    //     error2.style.transition = "3s";
-    //     error2.style.color = "red";
-
-    // }
-
+    
 
     else if(mail.value =null) {
               error3.innerText="You can't leave field empty"
@@ -100,7 +91,12 @@ function get() {
     var letters = /^[A-Za-z]+$/;
 
     if(fName.match(letters) && lName.match(letters)) {
-       return true;
+                
+        error1.innerText=""
+
+        error2.innerText=""
+
+
     }
 
     
@@ -115,13 +111,45 @@ function get() {
         error2.style.color = "red";
 
 
-      return false;
     }
+
+
+   
     
-    
+   
+    console.log("Welcome " + fName + " " + lName);
+    console.log(mail);
+}
+
+var button= document.getElementById("btn");
+var dropdown= document.getElementById("drop")
+dropdown.style.display="none"
+
+
+function p () {
+    if (dropdown.style.display=="none"){
+                 dropdown.style.transform = "scale(1.2)";
+                dropdown.style.display="block"
+
+               
+            }
+            
+
+}
+
+
+
+function cloose () {
+    dropdown.style.display="none"
 
 
 }
+
+
+
+
+
+
 
 
 
