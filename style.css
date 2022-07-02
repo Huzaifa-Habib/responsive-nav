@@ -13,6 +13,7 @@ body{
     flex-direction: row;
     padding: 15px;
 
+
 }
 
 
@@ -108,25 +109,37 @@ body{
 .sign{
     margin: 0 auto;
     
+    
 }
 
 .parent{
-    background-color: rgb(160, 159, 159);
-    border-radius: 5px;
+    background-color: white;
+    border-radius: 2px;
     padding: 20px;
-    text-align: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
 
 }
 
-.parent h3,h1{
-    color: white;
+.child{
+        text-align: center;
+        display: none;
+        height: 360px;
+
+
+}
+
+.parent h3{
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .child input{
     padding: 12px;
     border-radius: 10px;
-    width: 50%;
+    width: 60%;
     background-color:#303245;
     border: none;
     color: #fff;
@@ -142,7 +155,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.sign button{
+.sub{
     
     padding: 12px;
     border-radius: 10px;
@@ -157,7 +170,7 @@ body{
 
 }
 
-.sign button:hover{
+.sub button:hover{
     background-color: aqua;
     
 }
@@ -184,9 +197,15 @@ body{
 
 }
 
-.btn-close{
+#close{
     float: right;
-    width: 10px !important;
+    padding: 0 20px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+
 }
 
 #btn{
@@ -201,6 +220,104 @@ body{
 }
 
 
+.tabs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.log{
+    font-size: 30px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    border: 1px solid white;
+    text-align: center;
+    cursor: pointer;
+    padding: 0 20px;
+
+
+    
+}
+
+.sign-up{
+    font-size: 30px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    border: 1px solid white;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 30px;
+    padding: 0 20px;
+
+
+}
+
+.log-in{
+    text-align: center;
+    display: none;
+    height: 260px;
+
+}
+
+#logIn input{
+    width: 60%;
+}
+
+#logEmail{
+    padding: 12px;
+    border-radius: 10px;
+    width: 80%;
+    background-color:#303245;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    font-family: cursive;
+    outline: none;
+
+}
+
+#logPass{
+    padding: 12px;
+    border-radius: 10px;
+    width: 80%;
+    background-color:#303245;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    font-family: cursive;
+    outline: none;
+
+}
+
+#logEmail::placeholder{
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+
+
+}
+
+#logPass::placeholder{
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    
+}
+
+#passError{
+    font-size: 10px;
+    line-height: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+#gmailError{
+    font-size: 10px;
+    line-height: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
 
 
 @media screen and (max-width:800px) {
@@ -237,7 +354,7 @@ body{
     .child input{
         width: 70%;
     }
-   
+  
 
     
 }
@@ -249,6 +366,21 @@ body{
 
     .sub{
         width: 50% !important;
+    }
+
+    #tab1{
+        font-size: 18px;
+
+    }
+
+    #tab2{
+        font-size: 18px;
+
+
+    }
+
+    #logIn input{
+        width: 100%;
     }
 
 }
